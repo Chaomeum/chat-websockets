@@ -5,10 +5,10 @@ services:
     ports:
       - "27018:27017"
     volumes:
-      - mongo:/data
+      - mongo:/data/db
     environment:
-      - MONGO_INIT_DB_ROOT_USERNAME=jameofit
-      - MONGO_INIT_DB_ROOT_PASSWORD=jameofit
+      - MONGO_INITDB_ROOT_USERNAME=jameofit
+      - MONGO_INITDB_ROOT_PASSWORD=jameofit
   mongo-express:
     image: mongo-express
     container_name: mongo_express
